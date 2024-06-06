@@ -4,7 +4,7 @@ provider "aws"{
 }
 
 module "vpc" {
-  source = "../Modules/Network" 
+  source = "../../Modules/Network" 
   region = var.region
   project_name = var.project_name
   vpc_cidr = var.vpc_cidr
@@ -17,4 +17,5 @@ module "vpc" {
   private_data_subnet_az1_cidr = var.private_data_subnet_az1_cidr
   private_data_subnet_az2_cidr = var.private_data_subnet_az2_cidr
   private_data_subnet_az3_cidr = var.private_data_subnet_az3_cidr
+  
 }
