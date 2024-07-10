@@ -10,17 +10,17 @@ variable "vpc_cidr"{
     description ="cidr block of the vpc"
     type = string
 }
-variable "public_subnet_az1"{
+variable "public_subnet_az1_cidr"{
     description ="public subnet for first AZ"
     type = string
 }
-variable "public_subnet_az2"{
+variable "public_subnet_az2_cidr"{
 
     description ="public subnet for second AZ"
     type =string
     }
     
-variable "public_subnet_az3"{
+variable "public_subnet_az3_cidr"{
     description = "public subnet for third AZ"
     type = string
     }
