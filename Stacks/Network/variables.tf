@@ -25,6 +25,21 @@ variable "public_subnet_az3_cidr"{
     type = string
     }
 
+
+variable "public_subnet_az1_cidr"{
+    description = "public subnet for 1st AZ cidr"
+    type = string
+}
+variable  "public_subnet_az2_cidr"{
+    description ="public subnet for 2nd AZ cidr"
+    type = string
+}
+variable  "public_subnet_az3_cidr"{
+    description ="public subnet for 3rd AZ cidr"
+    type = string
+}
+
+
 variable "private_app_subnet_az1_cidr"{
     description ="private subnet app resources in cidr AZ 1"
     type = string
