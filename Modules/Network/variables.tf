@@ -29,7 +29,7 @@ variable "vpc_cidr"{
 }
 
 variable "public_subnet_az2_id" {
-    description ="id of public subnet in az2 for nat gateway"
+    description = "id of public subnet in az2 for nat gateway"
     type = string
 }
 
@@ -53,6 +53,7 @@ variable "private_app_subnet_az1_id" {
      description ="subnet for app layer in az2 for nat gateway"
     type = string
  }
+
  variable "public_subnet_az3_id"{
     description = "subnet public for az3"
  }
@@ -106,3 +107,13 @@ variable "S3_bucket" {
     description = "name of the S3 bucket"
     type = string
 }
+variable "instance_type"{
+    description = "type of instance"
+    type = string
+}
+
+variable "ami_image" {
+  description = "ami image for the front-end server"
+  type = string
+}
+
