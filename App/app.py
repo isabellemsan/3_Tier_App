@@ -1,4 +1,4 @@
-from msilib.schema import table
+
 from fastapi import FastAPI
 import boto3
 
