@@ -5,7 +5,7 @@ resource "aws_instance" "front_end_server" {
   vpc_security_group_ids = [aws_security_group.front-end_sg.id]
 
   
-  tags = {
-   Name = "front-end server"
-  }
+    tags = {
+      Name = locals.instance_tags 
+      }
 }
