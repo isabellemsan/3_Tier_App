@@ -1,6 +1,6 @@
 
 resource "aws_security_group" "alb_security_group" {
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port        = 80
@@ -32,7 +32,7 @@ resource "aws_security_group" "alb_security_group" {
 
 resource "aws_security_group" "front-end_sg" {
   name        = "front-end security group"
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     description      = "http access"
@@ -56,7 +56,7 @@ resource "aws_security_group" "front-end_sg" {
 
 
 resource "aws_security_group" "backend" {
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port        = 80
