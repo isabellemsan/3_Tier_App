@@ -6,6 +6,6 @@ resource "aws_instance" "front_end_server" {
 
   
     tags = {
-      Name = locals.instance_tags 
+      Name = "local.instance_tags"
       }
 }
