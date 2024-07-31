@@ -38,3 +38,7 @@ def insert_sample_items():
         {'cake_id': 2, 'name': 'Red Velvet cake', 'description': 'Rich red velvet cake'},
         {'cake_id': 3, 'name': 'Chocolate Cake', 'description': 'Tasty vanilla cake'}
     ]
+
+if __name__ == "__main__":
+    create_table()
+    insert_sample_items()
