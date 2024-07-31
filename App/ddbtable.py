@@ -1,5 +1,6 @@
 import boto3
 
+
 dynamodb = boto3.resource('dynamodb', region_name='eu-central-1')
 
 table_name='CakeInventory'
@@ -38,7 +39,16 @@ def insert_sample_items():
         {'cake_id': 2, 'name': 'Red Velvet cake', 'description': 'Rich red velvet cake'},
         {'cake_id': 3, 'name': 'Chocolate Cake', 'description': 'Tasty vanilla cake'}
     ]
+    
+    try:
+            for item in insert_sample_items:
+                table.put_item(Item=item)
+            print("Sample items inserted successfully.")
+        
+    except Exception as e:
+            print(f"Error inserting items: {e}")
 
 if __name__ == "__main__":
     create_table()
     insert_sample_items()
+    
